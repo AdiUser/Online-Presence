@@ -1,0 +1,151 @@
+/* Header */
+.large-header {
+	position: relative;
+	width: 100%;
+	background: #333;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+	z-index: 1;
+}
+
+.demo-1 .large-header {
+	background-image: url('../img/demo-1-bg.jpg');
+}
+
+.main-title {
+	margin: 0;
+	padding: 0;
+	color: #f9f1e9;
+	
+}
+
+.main-title-container {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    -webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+}
+
+.demo-1 .main-title, 
+.demo-3 .main-title {
+	text-transform: uppercase;
+	font-size: 6.2em;
+	letter-spacing: 0.1em;
+}
+
+.demo-2 .main-title {
+	font-family: 'Clicker Script', cursive;
+	font-weight: normal;
+	font-size: 8em;
+	padding-left: 10px;
+	text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+.main-title .thin {
+	font-weight: 200;
+}
+
+.inline-list {
+	list-style: none;
+	display: inline-flex;
+	flex-wrap: none;
+}
+.list__itm a i {
+	color : #2196F3;
+}
+.list__itm {
+	padding : 10px;
+}
+.list__itm:nth-child(1) {
+	margin-left : -50px;
+}
+
+/*=========About Section============*/
+.row-wrap-reverse {
+	display: inline-flex;
+	flex-wrap: wrap-reverse;
+	padding-top: 50px;
+}
+.row-wrap {
+	display: inline-flex;
+	flex-wrap: wrap;
+	padding-top: 50px;
+}
+.left-wrap {
+	width: 70%;
+	padding: 10px;
+}
+.right-wrap {
+	width: 30%;
+	padding: 10px;
+}
+.heading-text-slim-large {
+	font-size : 6em;
+	font-weight: 200;
+	letter-spacing: 3px;
+}
+.-left-border:before {
+	content: '';
+	border : solid 1px;
+	margin-right: 15px;
+}
+.-right-border:after{
+	content: '';
+	border : solid 1px;
+	margin-left: 15px;
+}
+.text-about{
+	position:  relative;
+	padding: 20px;
+	margin-right: 20px;
+	font-size: 1.99em;
+	border: solid 0.1px;
+	border-color: #ddd;
+}
+.text-about:after {
+	content: '';
+	position: absolute;
+	left: 100%;
+	top: 0;
+	width: 0;
+	height: 0;
+	border-left: 15px solid #ababab;
+	border-right: 10px solid transparent;
+	border-top: 0px solid transparent;
+	border-bottom: 20px solid transparent;
+	clear: both;
+}
+
+@media only screen and (max-width : 768px) {
+	.demo-1 .main-title, 
+	.demo-3 .main-title,
+	.demo-4 .main-title {
+		font-size: 5em;
+	}
+
+	.demo-2 .main-title {
+		font-size: 4em;
+	}
+	.fa {
+		font-size : 2em;
+	}
+	.right-wrap,.left-wrap {
+		width : 100%;
+	}
+	.heading-text-slim-large {
+		font-size: 4em;
+		font-weight: 400;
+	}
+	.text-about {
+		padding-top: 10px;
+		font-size: 1.9em;
+		font-weight: 400;
+		text-align: left;
+	}
+	.text-about:after{
+		border: none;
+	}
+}

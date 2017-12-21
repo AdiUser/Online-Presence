@@ -1,0 +1,29 @@
+{
+  "name": "p_f",
+  "version": "1.0.0",
+  "description": "Online Presence",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdiUser/Online-Presence.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "NodeJS",
+    "Online-Presence"
+  ],
+  "author": "Aditya Saxena",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AdiUser/Online-Presence/issues"
+  },
+  "homepage": "https://github.com/AdiUser/Online-Presence#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "nodemon": "^1.14.1"
+  }
+}
