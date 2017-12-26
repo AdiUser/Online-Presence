@@ -40,156 +40,215 @@ section {
 	text-align: center;
 }
 
-p.ref {
-	text-align: center;
-	padding: 2em 1em;
-}
-
-/* Header */
-.codrops-header {
+.og-grid {
+	list-style: none;
+	padding: 20px 0;
 	margin: 0 auto;
-	padding: 2em;
-	text-align: center;
-	max-width: 900px;
-}
-
-.codrops-header h1 {
-	margin: 0;
-	font-size: 4.5em;
-	line-height: 1;
-	font-weight: 200;
-}
-
-.codrops-header h1 span {
-	display: block;
-	padding: 1em 0 1.5em;
-	font-size: 36%;
-	color: #95a5a6;
-	line-height: 1.4;
-}
-
-/* To Navigation Style */
-.codrops-top {
+	/* text-align: center; */
 	width: 100%;
-	text-transform: uppercase;
-	font-weight: 700;
-	font-size: 0.69em;
-	text-align: center;
-	padding: 3em 0;
+	padding-top: 0px;
 }
 
-.codrops-top a {
+.og-grid li {
 	display: inline-block;
-	padding: 1.5em;
-	text-decoration: none;
-	letter-spacing: 1px;
+	width: 24%;
+	margin: 0px 5px 5px 0px;
+	vertical-align: top;
+	
 }
 
-.codrops-icon:before {
-	margin: 0 4px;
-	text-transform: none;
-	font-weight: normal;
-	font-style: normal;
-	font-variant: normal;
-	font-family: 'codropsicons';
-	line-height: 1;
-	speak: none;
-	-webkit-font-smoothing: antialiased;
-}
-
-.codrops-icon-drop:before {
-	content: "\e001";
-}
-
-.codrops-icon-prev:before {
-	content: "\e004";
-}
-
-/* Demo Buttons Style */
-.codrops-demos {
-	padding-top: 1em;
-	font-size: 0.8em;
-}
-
-.codrops-demos a {
-	display: inline-block;
-	margin: 0.35em 0.1em;
-	padding: 0.5em 1.2em;
+.og-grid li > a,
+.og-grid li > a img {
+	border: none;
 	outline: none;
-	text-decoration: none;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-weight: 700;
-	border-radius: 2px;
-	font-size: 110%;
-	border: 2px solid transparent;
+	display: block;
+	position: relative;
+	width:  100%;
 }
 
-.codrops-demos a:hover,
-.codrops-demos a.current-demo {
-	border-color: #383a3c;
+.og-grid li.og-expanded > a::after {
+	top: auto;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-bottom-color: #ddd;
+	border-width: 15px;
+	left: 50%;
+	margin: -20px 0 0 -15px;
 }
 
-.codrops-demos h3 {
-	margin: 0;
-	padding: 1em 0 0.5em 0;
-	font-size: 0.9em;
+.og-expander {
+	position: absolute;
+	background: #ddd;
+	top: auto;
+	left: 0;
+	width: 100%;
+	margin-top: 10px;
+	text-align: left;
+	height: 0;
+	overflow: hidden;
+}
+
+.og-expander-inner {
+	padding: 50px 30px;
+	height: 100%;
+}
+
+.og-close {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+}
+
+.og-close::before,
+.og-close::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	height: 1px;
+	background: #888;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.og-close::after {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.og-close:hover::before,
+.og-close:hover::after {
+	background: #333;
+}
+
+.og-fullimg,
+.og-details {
+	width: 50%;
 	float: left;
-	min-width: 90px;
-	clear: left;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
 }
 
-.codrops-demos div:not(:first-child) h3 {
-	padding-top: 2em;
+.og-details {
+	padding: 0 40px 0 20px;
 }
 
-.codrops-demos a:hover,
-.codrops-demos a.current-demo {
-	color: inherit;
-	border-color: initial;
+.og-fullimg {
+	text-align: center;
 }
 
-/* Related demos */
-.related {
-	padding: 10em 0;
-}
-
-.related p {
-	font-size: 1.5em;
-}
-
-.related > a {
+.og-fullimg img {
 	display: inline-block;
-	text-align: center;
-	margin: 20px 10px;
-	padding: 25px;
-	vertical-align: middle;
-}
-
-.related a img {
+	max-height: 100%;
 	max-width: 100%;
-	opacity: 0.8;
-	border-radius: 10px;
 }
 
-.related a:hover img,
-.related a:active img {
-	opacity: 1;
+.og-details h3 {
+	font-weight: 300;
+	font-size: 52px;
+	padding: 40px 0 10px;
+	margin-bottom: 10px;
 }
 
-.related a h3 {
-	margin: 0;
-	min-height: 63px;
-	padding: 0.5em 0 0.3em;
-	max-width: 300px;
-	text-align: center;
+.og-details p {
 	font-weight: 400;
-	font-size: 1em;
+	font-size: 16px;
+	line-height: 22px;
+	color: #999;
 }
 
-@media screen and (max-width: 40em) {
+.og-details a {
+	font-weight: 700;
+	font-size: 16px;
+	color: #333;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	padding: 10px 20px;
+	border: 3px solid #333;
+	display: inline-block;
+	margin: 30px 0 0;
+	outline: none;
+}
 
-	.codrops-header h1 {
-		font-size: 2.5em;
-	}
+.og-details a::before {
+	content: '\2192';
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.og-details a:hover {
+	border-color: #999;
+	color: #999;
+}
+
+.og-loading {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #ddd;
+	box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ccc;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -25px 0 0 -25px;
+	-webkit-animation: loader 0.5s infinite ease-in-out both;
+	-moz-animation: loader 0.5s infinite ease-in-out both;
+	animation: loader 0.5s infinite ease-in-out both;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+@-webkit-keyframes loader {
+	0% { background: #ddd; }
+	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
+}
+
+@-moz-keyframes loader {
+	0% { background: #ddd; }
+	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
+}
+
+@keyframes loader {
+	0% { background: #ddd; }
+	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
+}
+
+@media screen and (max-width: 830px) {
+
+	.og-expander h3 { font-size: 32px; }
+	.og-expander p { font-size: 13px; }
+	.og-expander a { font-size: 12px; }
+
+}
+
+@media screen and (max-width: 650px) {
+
+	.og-fullimg { display: none; }
+	.og-details { float: none; width: 100%; }
+	
 }
